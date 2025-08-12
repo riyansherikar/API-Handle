@@ -1,0 +1,53 @@
+.user-list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 0;
+  list-style: none;
+}
+.user-head{
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-list{
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  list-style: none;
+  background-color: rgb(48, 61, 61);
+  border-radius: 5%;
+  font-weight: 400;
+  font-size: 30px;
+  text-decoration: none;
+
+}
+
+.active{
+  font-weight: 900;
+  color: azure;
+}
+
+input{
+  width: 300px;
+  height: 50px;
+  padding: 4px;
+  font-size: 20px;
+  border-radius: 2%;
+  border: none;
+  box-shadow: none;
+}
+
+button{
+  width: 100px;
+  height: 50px;
+  padding: 4px;
+  font-size: 20px;
+  border-radius: 10%;
+  border: none;
+  box-shadow: none;
+}
