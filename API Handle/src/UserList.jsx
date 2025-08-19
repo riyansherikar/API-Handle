@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import './App.css'
+import { useNavigate } from 'react-router-dom';
 
 function UserList() {
   
   const [Data,setData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(()=>{
     getUserData();
@@ -30,6 +32,10 @@ function UserList() {
       getUserData();
     }
   }
+
+  const editUser = (id)=>{
+    navigate("/edit/"+id);
+  }
   return (
    <>
    
@@ -45,7 +51,10 @@ function UserList() {
         <li>{user.name}</li>
         <li>{user.age}</li>
         <li>{user.email}</li>
-        <li><button onClick={()=>deleteUser(user.id)}>Delete</button></li>
+        <li>
+          <button onClick={()=>deleteUser(user.id)}>Delete</button>
+          <button onClick={()=>editUser(user.id)}>Edit</button>
+        </li>
       </ul>
     ))
    }

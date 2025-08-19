@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css'
 import UserList from './UserList';
 import AddUser from './AddUser';
-import { Routes, Route, NavLink } from 'react-router';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import EditUser from './EditUser';
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<UserList />} />
         <Route path="/add" element={<AddUser />} />
+        <Route path="/edit/:id" element={<EditUser />} />
       </Routes>
     </>
   )
